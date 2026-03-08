@@ -3712,7 +3712,7 @@ input, select, textarea {
 		}
 
 			#banner .more:after {
-				background-image: url("images/arrow.svg");
+				background-image: url("assets/css/images/bmwm3.jpg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -4040,5 +4040,6 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
