@@ -68,10 +68,6 @@ input, select, textarea {
 
 /* Basic */
 
-	#warning {
-		margin: 25px 50px 75px 100px;
-	}
-
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -3995,6 +3991,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
