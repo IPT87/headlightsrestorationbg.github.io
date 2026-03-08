@@ -5,7 +5,7 @@
   /* 1. Setup the background */
   width: 100%;
   min-height: 100vh; /* Makes it full screen height */
-  background-image: url('bmwm3.jpg');
+  background-image: url('css/images/bmwm3.jpg');
   background-size: cover;
   background-position: center;
   
@@ -4028,3 +4028,4 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
