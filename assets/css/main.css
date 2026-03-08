@@ -1,11 +1,42 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+.hero-headlights {
+  /* 1. Setup the background */
+  width: 100%;
+  min-height: 100vh; /* Makes it full screen height */
+  background-image: url('bmwm3.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  /* 2. Style the text (optional) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  /* 3. The Animation - 3 seconds long */
+  animation: switchOn 3s ease-out forwards;
+}
+
+@keyframes switchOn {
+  0% {
+    filter: brightness(0); /* Pitch black */
+  }
+  15% {
+    filter: brightness(0.1); /* First flicker */
+  }
+  20% {
+    filter: brightness(0); /* Back to black */
+  }
+  30% {
+    filter: brightness(1.2); /* Bright flash */
+  }
+  100% {
+    filter: brightness(1); /* Settles at normal brightness */
+  }
+}
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
