@@ -3992,6 +3992,15 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
+	.whatsapp-btn{
+	background:#25D366;
+	color:white;
+	padding:12px 20px;
+	text-decoration:none;
+	border-radius:6px;
+	font-weight:bold;
+	}
+
 
 
 
