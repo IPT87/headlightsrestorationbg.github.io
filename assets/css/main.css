@@ -4000,29 +4000,3 @@ input, select, textarea {
 	border-radius:6px;
 	font-weight:bold;
 	}
-
-	.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-	}
-	
-	.whatsapp-float:hover {
-	    background-color: #1ebe5d;
-	}
-
-
-
-
-
-
-
-
