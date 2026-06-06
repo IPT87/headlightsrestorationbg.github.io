@@ -4225,3 +4225,114 @@ body.is-mobile.landing #footer {
 		transform: scale(1);
 	}
 }
+
+/* ==========================================================================
+   Componente Adicional: Slider Antes y Después
+   ========================================================================== */
+
+.slider-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 2em auto 0 auto;
+    aspect-ratio: 4 / 3; /* Proporción ideal para fotos de faros en primeros planos */
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.capa-antes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0); /* Centrado por defecto */
+    transition: none;
+}
+
+.slider-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 30;
+}
+
+.slider-linea {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #ffffff;
+    z-index: 20;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.slider-boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-boton::before, .slider-boton::after {
+    content: '';
+    position: absolute;
+    border: solid #2e3440;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.slider-boton::before {
+    transform: rotate(135deg);
+    left: 13px;
+}
+
+.slider-boton::after {
+    transform: rotate(-45deg);
+    right: 13px;
+}
+
+/* Ajuste móvil para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .slider-contenedor {
+        aspect-ratio: 1 / 1; /* Se vuelve cuadrado en móviles para enfocar mejor el faro */
+        margin-top: 1em;
+    }
+    .slider-boton {
+        width: 38px;
+        height: 38px;
+    }
+    .slider-boton::before { left: 11px; padding: 3px; }
+    .slider-boton::after { right: 11px; padding: 3px; }
+}
