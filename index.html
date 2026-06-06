@@ -105,6 +105,29 @@
 						</div>
 					</section>
 
+				<!-- Before/After slider -->
+					<section class="wrapper style3 special">
+                        <div class="inner">
+                            <header class="major">
+                                <h2>See the Difference</h2>
+                                <p>Drag the slider to see the incredible transformation before and after our restoration process.</p>
+                            </header>
+                            
+                            <div class="slider-contenedor">
+                            	<img src="images/pic09.JPG" alt="Restored headlight" class="slider-img">
+                                
+                                <div class="capa-antes">
+                                    <img src="images/pic08.JPG" alt="Cloudy headlight before restoration" class="slider-img">
+                                </div>
+                                
+                                <input type="range" min="0" max="100" value="50" class="slider-control" aria-label="Before and after percentage">
+                                <div class="slider-linea" aria-hidden="true">
+                                    <div class="slider-boton"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
@@ -177,6 +200,23 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					const contenedor = document.querySelector('.slider-contenedor');
+					const control = document.querySelector('.slider-control');
+					const antes = document.querySelector('.capa-antes');
+					const linea = document.querySelector('.slider-linea');
+		
+					if (control && antes && linea) {
+						control.addEventListener('input', (e) => {
+							const valor = e.target.value;
+							antes.style.clipPath = `inset(0 ${100 - valor}% 0 0)`;
+							linea.style.left = `${valor}%`;
+						});
+					}
+				});
+			</script>
 
 	</body>
 
