@@ -193,7 +193,7 @@
 								</div>
 							</div>
 						</div>
-						<button id="loadMore">Load More</button>
+						
 						<h5>Quality &amp; Comfort</h5>
 						<p><span class="image left"><img src="images/sunsetcar.jpg" alt="" /></span>Dull, yellow
 							headlights can make even a good car look older. Restoring them brings back clarity and
@@ -303,26 +303,6 @@
 			}
 		});
 
-		const rows = document.querySelectorAll(".image-row");
-		const btn = document.getElementById("loadMore");
-
-		let visible = 6;
-
-		rows.forEach((row, index) => {
-			if (index >= visible) row.style.display = "none";
-		});
-
-		btn.addEventListener("click", () => {
-			visible += 6;
-
-			rows.forEach((row, index) => {
-				if (index < visible) row.style.display = "flex";
-			});
-
-			if (visible >= rows.length) {
-				btn.style.display = "none";
-			}
-		});
 	</script>
 
 </body>
