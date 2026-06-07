@@ -4328,6 +4328,7 @@ body.is-mobile.landing #footer {
     .slider-contenedor {
         aspect-ratio: 1 / 1; /* Se vuelve cuadrado en móviles para enfocar mejor el faro */
         margin-top: 1em;
+		margin-bottom: 3.5em;
     }
     .slider-boton {
         width: 38px;
