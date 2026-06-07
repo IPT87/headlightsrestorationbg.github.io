@@ -4337,3 +4337,49 @@ body.is-mobile.landing #footer {
     .slider-boton::before { left: 11px; padding: 3px; }
     .slider-boton::after { right: 11px; padding: 3px; }
 }
+
+/* ==========================================================================
+   Botón Flotante de WhatsApp
+   ========================================================================== */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #FFF !important;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por encima (ordenador) */
+.whatsapp-flotante:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+}
+
+/* Icono de FontAwesome dentro del botón */
+.whatsapp-flotante i {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste fino para pantallas pequeñas móviles */
+@media screen and (max-width: 480px) {
+    .whatsapp-flotante {
+        bottom: 15px;
+        right: 15px;
+        width: 54px;
+        height: 54px;
+        font-size: 30px;
+    }
+}
